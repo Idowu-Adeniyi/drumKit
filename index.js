@@ -1,14 +1,21 @@
 var drums = document.querySelectorAll(".drum");
 
+// KeyPress EventListener
 document.addEventListener("keydown", (e)=>{
        var keypad = e.key;
        console.log(keypad)
         // Only change text color to white if the drum is clicked
         if(["w","a","s","d","j","k","l"].includes(keypad)){
               console.log("key has been pressed")
+              var activeDrum = document.querySelector("." + keypad);
+              console.log(activeDrum);
+                  if (activeDrum) {
+                     activeDrum.style.color = "blue"; 
+               }
         }
 
-
+        
+        
      if(e.key === "w"){
         var audio = new Audio ("sounds/tom-1.mp3");
            audio.play();
@@ -38,20 +45,24 @@ document.addEventListener("keydown", (e)=>{
            audio.play();
            console.log(e.key)     
      }
-
+  
 })
 
 
 
-
+// Click EventListener
 //forEach loop
 drums.forEach((drum)=>{
     drum.addEventListener("click", (e)=>{
     var key = e.target.innerHTML;
-        // Only change text color to white if the drum is clicked
+
+  // Only change text color to white if the drum is clicked
         if (key === "w" || key === "a" || key === "s" || key === "d" || key === "j" || key === "k" || key === "l") {
             e.target.style.color = "blue";
         }
+
+        
+
 
      if(e.target.innerHTML == "w"){
            var audio = new Audio ("sounds/tom-1.mp3");
@@ -82,6 +93,7 @@ drums.forEach((drum)=>{
      }else{
         console.log("Please click a drum!")
      }
+    
 
     })
 })
@@ -89,44 +101,6 @@ drums.forEach((drum)=>{
 
   
 
-
-
-// Using Switch
-// var btnInnerHTML = e.target.innerHTML;
-// switch (btnInnerHTML) {
-//     case "w":
-//         var audio = new Audio ("sounds/tom-4.mp3");
-//             audio.play();
-//         break;
-
-//     default:
-//         console.log("Please click a drum!")
-      
-// }
-
-
-
-
-
-
-//for loop
-// for(var i = 0; i < drums.length; i++){
-// drums[i].addEventListener("click", ()=> {
-//     handleClick();
-// });
-    
-// }
-
-
-//while loop
-// var i = 0;
-
-// while(i < drums.length){
-// drums[i].addEventListener("click", ()=> {
-//     handleClick();
-// });
-//    i++; 
-// }
 
 
 
