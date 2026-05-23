@@ -6,12 +6,15 @@ document.addEventListener("keydown", (e)=>{
        console.log(keypad)
         // Only change text color to white if the drum is clicked
         if(["w","a","s","d","j","k","l"].includes(keypad)){
-              console.log("key has been pressed")
+   
               var activeDrum = document.querySelector("." + keypad);
-              console.log(activeDrum);
-                  if (activeDrum) {
-                     activeDrum.style.color = "blue"; 
-               }
+             activeDrum.classList.add("pressed");
+              activeDrum.style.color = "blue"; 
+             setTimeout(()=>{
+              activeDrum.classList.remove("pressed");
+               activeDrum.style.color = ""; 
+             },100)
+                  
         }
 
      if(e.key === "w"){
@@ -58,6 +61,12 @@ drums.forEach((drum)=>{
         if (key === "w" || key === "a" || key === "s" || key === "d" || key === "j" || key === "k" || key === "l") {
             e.target.style.color = "blue";
         }
+
+         e.target.classList.add("pressed");
+             setTimeout(()=>{
+              e.target.classList.remove("pressed");
+              e.target.style.color = "";
+             },100)
 
 
      if(e.target.innerHTML == "w"){
