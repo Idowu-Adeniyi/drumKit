@@ -1,5 +1,49 @@
 var drums = document.querySelectorAll(".drum");
 
+document.addEventListener("keydown", (e)=>{
+       var keypad = e.key;
+       console.log(keypad)
+        // Only change text color to white if the drum is clicked
+        if(["w","a","s","d","j","k","l"].includes(keypad)){
+              console.log("key has been pressed")
+        }
+
+
+     if(e.key === "w"){
+        var audio = new Audio ("sounds/tom-1.mp3");
+           audio.play();
+           console.log(e.key)
+     }else if(e.key === "a"){
+         var audio = new Audio ("sounds/tom-2.mp3");
+           audio.play();
+           console.log(e.key)     
+     }else if(e.key === "s"){
+         var audio = new Audio ("sounds/tom-3.mp3");
+           audio.play();
+           console.log(e.key)     
+     }else if(e.key === "d"){
+         var audio = new Audio ("sounds/tom-4.mp3");
+           audio.play();
+           console.log(e.key)     
+     }else if(e.key === "j"){
+         var audio = new Audio ("sounds/crash.mp3");
+           audio.play();
+           console.log(e.key)     
+     }else if(e.key === "k"){
+         var audio = new Audio ("sounds/kick-bass.mp3");
+           audio.play();
+           console.log(e.key)     
+     }else if(e.key === "l"){
+         var audio = new Audio ("sounds/snare.mp3");
+           audio.play();
+           console.log(e.key)     
+     }
+
+})
+
+
+
+
 //forEach loop
 drums.forEach((drum)=>{
     drum.addEventListener("click", (e)=>{
@@ -11,7 +55,8 @@ drums.forEach((drum)=>{
 
      if(e.target.innerHTML == "w"){
            var audio = new Audio ("sounds/tom-1.mp3");
-            audio.play();
+           audio.play();
+          
            
      }else if (e.target.innerHTML == "a"){
             var audio = new Audio ("sounds/tom-2.mp3");
@@ -40,6 +85,10 @@ drums.forEach((drum)=>{
 
     })
 })
+
+
+  
+
 
 
 // Using Switch
@@ -80,3 +129,40 @@ drums.forEach((drum)=>{
 // }
 
 
+
+// function HouseKeeper(name, age, sex, yearsOfExperience, languages){
+//     this.name = name;
+//     this.age = age;
+//     this.sex = sex;
+//     this.yearsOfExperience = yearsOfExperience;
+//     this.languages = languages;
+//     this.clean = function(){
+//         console.log("Cleaning in progress!");
+//     }
+// }
+
+
+// var houseKeeper1 = new HouseKeeper("Jane", 30, "female", 12, ["English", "French"])
+// var houseKeeper2 = new HouseKeeper("Mary", 36, "female", 10, ["Spanish", "French"])
+
+// console.log(houseKeeper1.age , houseKeeper2.clean())
+
+
+// function cleaner(){
+//        console.log("Cleaning in progress...");
+// }
+
+
+// function Bellman(name, age, sex, yearsOfExperience){
+//        this.name = name;
+//        this.age = age;
+//        this.sex = sex;
+//        this.yearsOfExperience = yearsOfExperience;
+//        this.clean = function(){
+//               cleaner();
+//        }
+// }
+
+// var bellman1 = new Bellman ("Mike", 40, "male", 12);
+
+// console.log(bellman1.clean());
