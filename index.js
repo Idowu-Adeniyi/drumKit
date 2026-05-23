@@ -130,39 +130,3 @@ drums.forEach((drum)=>{
 
 
 
-// function HouseKeeper(name, age, sex, yearsOfExperience, languages){
-//     this.name = name;
-//     this.age = age;
-//     this.sex = sex;
-//     this.yearsOfExperience = yearsOfExperience;
-//     this.languages = languages;
-//     this.clean = function(){
-//         console.log("Cleaning in progress!");
-//     }
-// }
-
-
-// var houseKeeper1 = new HouseKeeper("Jane", 30, "female", 12, ["English", "French"])
-// var houseKeeper2 = new HouseKeeper("Mary", 36, "female", 10, ["Spanish", "French"])
-
-// console.log(houseKeeper1.age , houseKeeper2.clean())
-
-
-// function cleaner(){
-//        console.log("Cleaning in progress...");
-// }
-
-
-// function Bellman(name, age, sex, yearsOfExperience){
-//        this.name = name;
-//        this.age = age;
-//        this.sex = sex;
-//        this.yearsOfExperience = yearsOfExperience;
-//        this.clean = function(){
-//               cleaner();
-//        }
-// }
-
-// var bellman1 = new Bellman ("Mike", 40, "male", 12);
-
-// console.log(bellman1.clean());
